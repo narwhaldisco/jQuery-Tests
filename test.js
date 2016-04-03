@@ -124,7 +124,7 @@ describe('jQuery Tests', function(){
 			  .number(diff)
 			  .isLessThan(5);
 			  
-			console.log('$("#w3s2").attr("href", "http://www.w3schools.com/jquery"); :' + diff);
+			console.log('$("#w3s2").attr("href", "http//www.w3schools.com/jquery"); :' + diff);
 			
 		});
 		
