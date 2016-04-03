@@ -182,6 +182,60 @@ describe('jQuery Tests', function(){
 			
 		});
 		
+		it('$("#test4").before(<b id=b4>Before</b>);', function(){
+			
+			var start = new Date().getTime();
+			
+			//some jQuery!
+			$("#test4").before('<b id="b4">Before</b>');
+			
+			var end = new Date().getTime();
+			
+			var diff = end - start;
+			
+			var example = $( "#b4" ).text();
+			
+			//Check functional
+			unitjs
+			  .string(example)
+			  .contains('Before');
+			
+			//Check timing!!!
+			unitjs
+			  .number(diff)
+			  .isLessThan(5);
+			  
+			console.log('$("#test4").before(<b id="b4">Before</b>); :' + diff);
+			
+		});
+		
+		it('$("#test4").after(<b id=b4>After</b>);', function(){
+			
+			var start = new Date().getTime();
+			
+			//some jQuery!
+			$("#test4").after('<b id="after">After</b>');
+			
+			var end = new Date().getTime();
+			
+			var diff = end - start;
+			
+			var example = $( "#after" ).text();
+			
+			//Check functional
+			unitjs
+			  .string(example)
+			  .contains('After');
+			
+			//Check timing!!!
+			unitjs
+			  .number(diff)
+			  .isLessThan(5);
+			  
+			console.log('$("#test4").after(<b id="after">After</b>); :' + diff);
+			
+		});
+		
 		it('$("#test").hide()', function(){
 			
 			var start = new Date().getTime();
