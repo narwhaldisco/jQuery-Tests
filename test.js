@@ -260,7 +260,7 @@ describe('jQuery Reliability Tests', function(){
 
 	for(var i = 0; i < 1000; i++) {
 		describe('Test .text() reliability', function() {
-			it('$("p").val("hello")', function() {
+			it('$("p").test("hello")', function() {
 				$("p").text("My first paragraph.");
 				$("p").text("hello");
 				
